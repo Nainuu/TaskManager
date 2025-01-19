@@ -16,7 +16,19 @@ export default function Dashboard() {
             <div>
                 {/* top  */}
                 <Date/>
+                <p>Husnain Anwar</p>
             </div>
+            <div>
+                <div>
+                    <h2>Welcome to the Dashboard</h2>
+                    <h3>This is your Dashboard where you can manage your routine,tasks and notes</h3>
+                </div>
+                <div>
+                    {/* cards */}
+                    
+                </div>
+            </div>
+
         </div>
     </div>
   )
