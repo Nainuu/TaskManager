@@ -18,6 +18,10 @@ const Login = () => {
         </p>
         <button onClick={handleClick}>SignUp</button>
       </div>
+            {/* just for the sake of testing */}
+      <button onClick={() => navigate('/task')}>
+        linking to task page for testing 
+      </button>
     </div>
   )
 }

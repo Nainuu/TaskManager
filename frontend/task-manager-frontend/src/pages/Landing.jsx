@@ -17,6 +17,7 @@ const Landing = () => {
       <div>
         <h1>A place where ideas meets fate</h1>
         <button>SignUp</button>
+        <button onClick={() => navigate('/dashboard')}>Dashboard</button>
       </div>
     </div>
   )
