@@ -1,6 +1,7 @@
 import React from 'react'
-import { useNavigate } from 'react-router'
+import { useNavigate , Link } from 'react-router'
 import Date from '../componenets/shared/Date';
+import Header from '../componenets/tasks/Header';
 
 
 export default function Dashboard() {
@@ -8,9 +9,7 @@ export default function Dashboard() {
 
   return (
     <div>
-        <div>
-            this is the left hand side
-        </div>  
+        <Header />
         <div>
             {/* right hand side */}
             <div>

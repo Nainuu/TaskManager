@@ -12,9 +12,7 @@ import Dashboard from './pages/Dashboard';
 export default function App() {
   return (
     <div>
-      <Header/>
       <Router>
-
           <Routes>
             <Route path="/" element={<Landing/>} />
             <Route path="/login" element={<Login/>} />
