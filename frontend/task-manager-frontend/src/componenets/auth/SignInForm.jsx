@@ -13,7 +13,7 @@ export default function SignInForm() {
     const handleLoginSubmit = (e) => {
       e.preventDefault();
       const newUser = {
-        uemail : email,
+        uEmail : email,
         uPassword : password
       }
       axios.post('http://localhost:5001/login' , newUser)

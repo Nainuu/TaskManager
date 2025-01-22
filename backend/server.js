@@ -32,19 +32,42 @@ const Register = mongoose.model('Register' , registerSchema);
 // Uncomment to seed database once, then comment again
 // seedDatabase();
 
-
+// for the user Register and login
 app.post('/register', async (req, res) => {
-  console.log("Request body:", req.body); // Log incoming data
+  console.log("Request body:", req.body); 
   try {
-    const newUser = new Register(req.body); // Create new user
-    await newUser.save(); // Save user to MongoDB
-    console.log("User saved:", newUser); // Log saved user
-    res.status(201).json(newUser); // Send response
+    const newUser = new Register(req.body); 
+    await newUser.save(); 
+    console.log("User saved:", newUser); 
+    res.status(201).json(newUser); 
   } catch (err) {
     console.error("Error saving user:", err);
     res.status(500).json({ error: "An error occurred while saving the user." });
   }
 });
+
+app.post('/login', async (req, res) => {
+  console.log("Request body:", req.body); 
+  try {
+    const userAuth = req.body;
+    Register.findOne({uEmail : userAuth.uEmail})
+    .then(user => {
+      if(user){
+        if(user.uPassword === userAuth.uPassword) {
+          red.json("Success");
+        } else {
+          res.json("Password is incorrect");
+        }
+      } else  {
+        res.json("no record existed");
+      }
+    })
+  } catch (err) {
+    console.error("Error saving user:", err);
+    res.status(500).json({ error: "An error occurred while saving the user." });
+  }
+});
+
 
 app.get('/tasks', async (req, res) => {
   try {
