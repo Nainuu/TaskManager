@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const parseBody = require('body-parser');
+// const sample = require('./models/SampleModel') // this is just for later purpose and is a sample
 
 const app = express();
 
@@ -18,15 +19,38 @@ const taskScheme = new mongoose.Schema({
   description: String,
 });
 
+const registerSchema = new mongoose.Schema({
+  fName : String,
+  lName : String,
+  uEmail : String,
+  uPassword : String
+});
+
 const Task = mongoose.model('Task', taskScheme);
+const Register = mongoose.model('Register' , registerSchema);
 
 // Uncomment to seed database once, then comment again
 // seedDatabase();
 
+
+app.post('/register', async (req, res) => {
+  console.log("Request body:", req.body); // Log incoming data
+  try {
+    const newUser = new Register(req.body); // Create new user
+    await newUser.save(); // Save user to MongoDB
+    console.log("User saved:", newUser); // Log saved user
+    res.status(201).json(newUser); // Send response
+  } catch (err) {
+    console.error("Error saving user:", err);
+    res.status(500).json({ error: "An error occurred while saving the user." });
+  }
+});
+
 app.get('/tasks', async (req, res) => {
   try {
     const allTasks = await Task.find();
-    res.json(allTasks);
+    const taskCount = allTasks.length; 
+    res.json({ tasks: allTasks, taskNo: taskCount }); 
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch tasks' });
   }
