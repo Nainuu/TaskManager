@@ -10,7 +10,8 @@ const TaskMain = () => {
   // Fetch Tasks from Backend
   useEffect(() => {
     axios.get('http://localhost:5001/tasks')
-      .then((response) => setTasks(response.data))
+      .then((response) => 
+        setTasks(response.data.tasks))
       .catch((error) => console.error('Error fetching tasks:', error));
   }, []);
 

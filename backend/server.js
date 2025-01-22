@@ -47,19 +47,19 @@ app.post('/register', async (req, res) => {
 });
 
 app.post('/login', async (req, res) => {
-  console.log("Request body:", req.body); 
+  console.log("Request for the login:", req.body); 
   try {
     const userAuth = req.body;
     Register.findOne({uEmail : userAuth.uEmail})
     .then(user => {
       if(user){
         if(user.uPassword === userAuth.uPassword) {
-          red.json("Success");
+          res.json("Success");
         } else {
-          res.json("Password is incorrect");
+          res.json("noPassword");
         }
       } else  {
-        res.json("no record existed");
+        res.json("noUser");
       }
     })
   } catch (err) {

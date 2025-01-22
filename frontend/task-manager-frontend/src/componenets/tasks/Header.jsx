@@ -17,6 +17,9 @@ const Header = () => {
               <Link to='/notes'>Notes</Link>
               <Link to='/reminder'>Reminder</Link>
           </ul>
+          <div>
+            <button onClick={() => navigate("/login")} >SignOut</button>
+          </div>
       </nav>
     </div> 
   )

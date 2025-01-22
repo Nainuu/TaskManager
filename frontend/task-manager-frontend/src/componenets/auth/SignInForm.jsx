@@ -17,9 +17,13 @@ export default function SignInForm() {
         uPassword : password
       }
       axios.post('http://localhost:5001/login' , newUser)
-      .then(Response => {
-        console.log(response)
-        nav("/dashboard");
+      .then(response => {
+        console.log("response")
+        if (response.data === "Success") {
+          nav("/dashboard");
+        } else if (response.data === "noPassword") {
+          console.log("No user exists");
+        }
     })
       .catch(err => console.log(err))
     }
