@@ -7,9 +7,9 @@ import Card from '../componenets/shared/Card';
 
 export default function Dashboard() {
     const navigate = useNavigate();
-    
+
   return (
-    <div>
+    <div className="bg-blue-500 text-white p-4 rounded-lg">
         <Header />
         <div>
             {/* right hand side */}
