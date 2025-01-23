@@ -11,7 +11,7 @@ import Dashboard from './pages/Dashboard';
 
 export default function App() {
   return (
-    <div>
+    <>
       <Router>
           <Routes>
             <Route path="/" element={<Landing/>} />
@@ -22,6 +22,6 @@ export default function App() {
             <Route path="/test" element={<Test />} />
           </Routes>
         </Router>
-    </div>
+    </>
   )
 }
