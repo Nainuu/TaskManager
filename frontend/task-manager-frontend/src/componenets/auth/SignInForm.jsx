@@ -29,25 +29,25 @@ export default function SignInForm() {
     }
 
   return (
-    <div className="flex flex-col max-w-xs pb- w-full items-center bg-slate-600 rounded-xl gap-8 mt-5">
+    <div className="flex flex-col max-w-xs w-full items-centerrounded-xl gap-8">
   <ToastContainer />
   <h3 className="font-bold text-2xl font-serif text-black font-black ">Welcome Back!</h3>
   <form
     className="flex flex-col items-center border-blue-950 gap-1 pb-6"
     onSubmit={handleLoginSubmit}
   >
-    <label className="text-sm font-bold">Email</label>
+    <label className="font-semibold text-lg">Email</label>
     <input
       type="text"
-      className="bg-slate-800 placeholder:px-2 border border-black rounded-lg p-1 text-sm text-white"
+      className="bg-slate-800 placeholder-gray-400 border border-slate-600 rounded-lg p-2 text-sm text-white focus:ring-2 focus:ring-blue-400 focus:outline-none w-full"
       placeholder="example@gmail.com"
       required
       onChange={(e) => setEmail(e.target.value)}
     />
-    <label className="text-sm mt-3 font-bold">Password</label>
+    <label className="text-lg mt-3 font-semibold">Password</label>
     <input
       type="text"
-      className="bg-slate-800 placeholder:px-2 border border-black rounded-lg p-1 text-sm text-white"
+      className="bg-slate-800 placeholder-gray-400 border border-slate-600 rounded-lg p-2 text-sm text-white focus:ring-2 focus:ring-blue-400 focus:outline-none w-full"
       placeholder="I am your Secret"
       required
       onChange={(e) => setPassword(e.target.value)}
