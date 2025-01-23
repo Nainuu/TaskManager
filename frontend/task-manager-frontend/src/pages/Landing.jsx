@@ -2,25 +2,45 @@ import React from 'react'
 import { useNavigate } from 'react-router'
 
 const Landing = () => {
-
   const navigate = useNavigate();
 
   const handleClick = () => {
     navigate('/login');
   }
+
   return (
-    <div className='landing flex flex-col gap-10'>
-      <div className=''>
-        <h1 className='font-bold text-5xl font-serif text-blue-950 '>The Ultimate Task Manager</h1>
-        <button onClick={handleClick} className='bg-slate-900 px-8 py-3 rounded-3xl my-5 hover:font-semibold'>Login</button>
+    <div className='landing flex flex-col min-h-screen '>
+      <div className='flex flex-col justify-center items-center flex-grow text-center px-5 sm:px-10 py-20'>
+        {/* Top section */}
+        <h1 className='font-extrabold text-4xl sm:text-5xl lg:text-6xl font-serif text-gray-900'>
+          The Ultimate Task Manager
+        </h1>
+        <p className='mt-4 text-lg sm:text-xl lg:text-2xl max-w-2xl mx-auto text-gray-700'>
+          A simple and effective tool to manage your tasks and boost productivity.
+        </p>
+        <button 
+          onClick={handleClick} 
+          className='mt-8 bg-slate-900 text-white px-8 py-3 rounded-full hover:font-semibold transition-all transform hover:scale-105 shadow-lg'>
+          Login
+        </button>
       </div>
-      <div>
-        <h1 className='font-bold text-5xl font-serif text-blue-950 '>A place where ideas meets <strong className='text-6xl'>Fate</strong></h1>
-        <button onClick={() => navigate('/signup')} className='bg-slate-900 px-8 py-3 rounded-3xl my-5 hover:font-semibold'>SignUp</button>
-        {/* <button onClick={() => navigate('/dashboard')}>Dashboard</button> */}
+
+      <div className='flex flex-col justify-center items-center text-center px-5 sm:px-10 py-16'>
+        {/* Bottom section */}
+        <h2 className='font-semibold text-3xl sm:text-4xl lg:text-5xl text-gray-900'>
+          A place where ideas meet <span className='text-slate-900 font-extrabold'>Fate</span>
+        </h2>
+        <p className='mt-4 text-lg sm:text-xl lg:text-2xl text-gray-600 max-w-2xl mx-auto'>
+          Whether you're managing work tasks, school projects, or personal goals, our tool keeps you organized and focused.
+        </p>
+        <button 
+          onClick={() => navigate('/signup')} 
+          className='mt-6 bg-slate-900 text-white px-8 py-3 rounded-full hover:font-semibold transition-all transform hover:scale-105 shadow-lg'>
+          Sign Up
+        </button>
       </div>
     </div>
-  )
+  );
 }
 
-export default Landing
+export default Landing;

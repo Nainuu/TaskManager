@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const TaskMain = () => {
+// 
+
+const Routine = () => {
   const [tasks, setTasks] = useState([]);
   const [taskName, setTaskName] = useState('');
   const [taskDescription, setTaskDescription] = useState('');
@@ -38,7 +40,7 @@ const TaskMain = () => {
 
   return (
       <div className="flex flex-col items-center min-h-screen bg-gray-100 p-5">
-        <h2 className="text-3xl font-bold font-serif text-black mb-5">TASK MANAGER</h2>
+        <h2 className="text-3xl font-bold font-serif text-black mb-5">ADD TO YOUR ROUTINE</h2>
 
         <form 
           className="w-full max-w-md bg-white shadow-md rounded-lg p-5 space-y-4"
@@ -67,7 +69,7 @@ const TaskMain = () => {
           </button>
         </form>
 
-        <h2 className="text-2xl font-semibold text-gray-800 mt-10 font-serif">TASK LIST</h2>
+        <h2 className="text-2xl font-semibold text-gray-800 mt-10 font-serif">YOUR ROUTINE</h2>
         <ul className="w-full max-w-md space-y-6 mt-5">
           {tasks.map((task) => (
             <li
@@ -96,4 +98,4 @@ const TaskMain = () => {
   );
 };
 
-export default TaskMain;
+export default Routine;

@@ -10,11 +10,10 @@
 #root {
     min-width: 100%;
     min-height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9));
+    background: linear-gradient(to right, #e2e8f0, #cbd5e1, #94a3b8);
+    color: #1f2937; 
     text-align: center;
 }
 
 .landing {
-    color: aliceblue;
-    padding: 10px;
 }

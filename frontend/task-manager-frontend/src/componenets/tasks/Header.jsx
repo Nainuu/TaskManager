@@ -25,7 +25,7 @@ const Header = () => {
           </li>
           <li>
             <Link
-              to="/task"
+              to="/dashboard/tasks"
               className="hover:text-blue-400 transition-colors duration-200 text-base sm:text-lg lg:text-xl"
             >
               Tasks
@@ -33,7 +33,7 @@ const Header = () => {
           </li>
           <li>
             <Link
-              to="/routines"
+              to="/dashboard/routine"
               className="hover:text-blue-400 transition-colors duration-200 text-base sm:text-lg lg:text-xl"
             >
               Routine
