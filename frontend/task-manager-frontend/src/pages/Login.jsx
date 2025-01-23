@@ -16,7 +16,7 @@ const Login = () => {
         <p className='pt-2 font-semibold'>
           No Account yet?
         </p>
-        <button onClick={handleClick} className='bg-slate-900 px-8 py-2 rounded-3xl my-3 hover:font-semibold text-white'>
+        <button onClick={handleClick} className='bg-slate-50 w-full rounded-lg text-sm py-1 dark:text-black border border-black hover:font-bold my-3 w-32'>
           Sign Up
         </button>
       </div>
