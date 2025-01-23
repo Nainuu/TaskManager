@@ -33,7 +33,7 @@ const Signup = () => {
 
   return (
    <div className='flex flex-col items-center'>
-    <h2 className='font-bold text-3xl font-serif text-blue-950 font-black'>The Ultimate Task Manager</h2>
+    <h2 className='font-bold text-3xl font-serif text-blue-950'>The Ultimate Task Manager</h2>
     <div className="flex flex-col max-w-sm w-full items-center bg-slate-600 rounded-xl shadow-lg p-6 mt-10">
       <ToastContainer />
       <h3 className="text-2xl font-bold font-serif text-black mb-4">Sign Up</h3>

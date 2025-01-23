@@ -19,10 +19,11 @@ export default function Card({name}) {
 
     const navigate = useNavigate();
   return (
-    <div>
-      <h3>{name}</h3>
+    <div className='bg-slate-50 p-4 rounded-lg shadow-lg flex flex-col items-start'>
+      <h3 className='font-semibold '>{name}</h3>
       <p>You have {taskNo} {name}{taskNo > 1 ? 's' : ""} pending.</p>
-      <button onClick={ () => navigate('/task')}>View {name}{taskNo > 1 ? 's' : ""}</button>
+      <button onClick={ () => navigate('/task')}
+        className='mt-4 bg-blue-500 text-white w-full p-1 rounded-md text-sm'>View {name}{taskNo > 1 ? 's' : ""}</button>
     </div>
   )
 }

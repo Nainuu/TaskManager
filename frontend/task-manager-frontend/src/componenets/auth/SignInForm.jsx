@@ -29,9 +29,9 @@ export default function SignInForm() {
     }
 
   return (
-    <div className="flex flex-col max-w-xs w-full items-centerrounded-xl gap-8">
+    <div className="flex flex-col max-w-xs w-full items-center rounded-xl gap-8">
   <ToastContainer />
-  <h3 className="font-bold text-2xl font-serif text-black font-black ">Welcome Back!</h3>
+  <h3 className="font-bold text-2xl font-serif text-black ">Welcome Back!</h3>
   <form
     className="flex flex-col items-center border-blue-950 gap-1 pb-6"
     onSubmit={handleLoginSubmit}

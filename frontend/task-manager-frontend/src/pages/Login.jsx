@@ -10,7 +10,7 @@ const Login = () => {
   }
   return (
     <div className='flex flex-col items-center gap-5 '>
-      <h2 className='font-bold text-3xl font-serif text-blue-950 font-black'>The Ultimate Task Manager</h2>
+      <h2 className='font-bold text-3xl font-serif text-blue-950 '>The Ultimate Task Manager</h2>
       <div className='flex-grow flex-col  bg-slate-600 rounded-2xl max-w-sm flex items-center justify-center w-full m-5 pb-8'>
         <SignInForm />
         <p className='text-sm text-gray-100 mt-3'>

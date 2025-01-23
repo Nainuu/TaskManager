@@ -13,7 +13,7 @@ export default function DateComponent() {
 
   return (
     <div>
-      <h3>{dateTime}</h3>
+      <h3 className='font-mono font-semibold'>{dateTime}</h3>
     </div>
   );
 }
