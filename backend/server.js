@@ -27,7 +27,9 @@ const registerSchema = new mongoose.Schema({
 });
 
 const routineSchema = new mongoose.Schema({
+  rDay : [String],
   rTime : String,
+  rTitle : String,
   rDescription : String 
 });
 
@@ -106,14 +108,38 @@ app.delete('/tasks/:id', async (req, res) => {
 });
 
 // this is for the routine part
-app.get("/routine" , async (req,res) => {
+app.get('/routine', async (req, res) => {
   try {
     const allRoutine = await Routine.find();
     const routineCount = allRoutine.length;
-    res.json({routine : allRoutine , rCount : routineCount })
+    res.json({ routine: allRoutine, rCount: routineCount });
   } catch (err) {
-    console.log('Error arises in the routine' , err)}''
-} )
+    console.error('Error arises in the routine:', err);
+    res.status(500).json({ error: 'Failed to fetch routines' });
+  }
+});
+
+app.post('/routine', async (req, res) => {
+  try {
+    const newRoutine = new Routine(req.body);
+    await newRoutine.save();
+    res.status(201).json(newRoutine);
+  } catch (err) {
+    console.error('Error in routine posting:', err);
+    res.status(500).json({ error: 'Error saving the routine' });
+  }
+});
+
+app.delete('/routine/:id', async (req, res) => {
+  try {
+    const deleteRoutine = await Routine.findByIdAndDelete(req.params.id);
+    if (!deleteRoutine) return res.status(404).json({ error: 'Routine not found' });
+    res.status(200).json({ message: 'Routine deleted successfully' });
+  } catch (err) {
+    res.status(500).json({ error: 'Error in deleting routine' });
+  }
+});
+
 
 const port = 5001;
 app.listen(port, () => console.log(`Server running on http://localhost:${port}`));
