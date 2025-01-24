@@ -26,8 +26,14 @@ const registerSchema = new mongoose.Schema({
   uPassword : String
 });
 
+const routineSchema = new mongoose.Schema({
+  rTime : String,
+  rDescription : String 
+});
+
 const Task = mongoose.model('Task', taskScheme);
 const Register = mongoose.model('Register' , registerSchema);
+const Routine = mongoose.model('Routine' , routineSchema);
 
 // Uncomment to seed database once, then comment again
 // seedDatabase();
@@ -98,6 +104,16 @@ app.delete('/tasks/:id', async (req, res) => {
     res.status(500).json({ error: 'Failed to delete task' });
   }
 });
+
+// this is for the routine part
+app.get("/routine" , async (req,res) => {
+  try {
+    const allRoutine = await Routine.find();
+    const routineCount = allRoutine.length;
+    res.json({routine : allRoutine , rCount : routineCount })
+  } catch (err) {
+    console.log('Error arises in the routine' , err)}''
+} )
 
 const port = 5001;
 app.listen(port, () => console.log(`Server running on http://localhost:${port}`));
