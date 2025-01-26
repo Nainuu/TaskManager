@@ -9,8 +9,8 @@ const Landing = () => {
   }
 
   return (
-    <div className='landing flex flex-col min-h-screen '>
-      <div className='flex flex-col justify-center items-center flex-grow text-center px-5 sm:px-10 py-20'>
+    <div className='landing flex flex-col py-20 '>
+      <div className='flex flex-col justify-center items-center flex-grow text-center px-5 sm:px-10 py-12'>
         {/* Top section */}
         <h1 className='font-extrabold text-4xl sm:text-5xl lg:text-6xl font-serif text-gray-900'>
           The Ultimate Task Manager
@@ -25,13 +25,13 @@ const Landing = () => {
         </button>
       </div>
 
-      <div className='flex flex-col justify-center items-center text-center px-5 sm:px-10 py-16'>
+      <div className='flex flex-col justify-center items-center text-center px-5 sm:px-10 pb-12 '>
         {/* Bottom section */}
         <h2 className='font-semibold text-3xl sm:text-4xl lg:text-5xl text-gray-900'>
           A place where ideas meet <span className='text-slate-900 font-extrabold'>Fate</span>
         </h2>
         <p className='mt-4 text-lg sm:text-xl lg:text-2xl text-gray-600 max-w-2xl mx-auto'>
-          Whether you're managing work tasks, school projects, or personal goals, our tool keeps you organized and focused.
+          New here? Join Us
         </p>
         <button 
           onClick={() => navigate('/signup')} 

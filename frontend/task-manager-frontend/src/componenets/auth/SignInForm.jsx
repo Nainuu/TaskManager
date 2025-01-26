@@ -29,31 +29,31 @@ export default function SignInForm() {
     }
 
   return (
-    <div className="flex flex-col max-w-xs w-full items-center rounded-xl gap-8">
+    <div className="flex flex-col max-w-md w-full items-center rounded-xl gap-8">
   <ToastContainer />
   <h3 className="font-bold text-2xl font-serif text-black ">Welcome Back!</h3>
   <form
-    className="flex flex-col items-center border-blue-950 gap-1 pb-6"
+    className="flex flex-col items-center border-blue-950 gap-1 pb-4 w-full px-6"
     onSubmit={handleLoginSubmit}
   >
     <label className="font-semibold text-lg">Email</label>
     <input
       type="text"
-      className="bg-slate-800 placeholder-gray-400 border border-slate-600 rounded-lg p-2 text-sm text-white focus:ring-2 focus:ring-blue-400 focus:outline-none w-full"
-      placeholder="example@gmail.com"
+      className="bg-slate-900 placeholder-gray-400 border border-slate-600 rounded-lg p-2 text-sm text-white focus:ring-2 focus:ring-blue-400 focus:outline-none w-full"
+      placeholder="Example@gmail.com"
       required
       onChange={(e) => setEmail(e.target.value)}
     />
     <label className="text-lg mt-3 font-semibold">Password</label>
     <input
       type="text"
-      className="bg-slate-800 placeholder-gray-400 border border-slate-600 rounded-lg p-2 text-sm text-white focus:ring-2 focus:ring-blue-400 focus:outline-none w-full"
+      className="bg-slate-900 placeholder-gray-400 border border-slate-600 rounded-lg p-2 text-sm text-white focus:ring-2 focus:ring-blue-400 focus:outline-none w-full"
       placeholder="I am your Secret"
       required
       onChange={(e) => setPassword(e.target.value)}
     />
     <button
-      className="bg-slate-50 hover:font-bold border border-black justify-items-center rounded-lg text-sm py-1 dark:text-black mt-3 w-32"
+      className="bg-slate-50 mt-2 trantion-all duration-300 ease-in-out hover:font-bold hover:border-2 border border-black justify-items-center rounded-lg text-sm py-1 dark:text-black  w-32"
       type="submit"
       onClick={() => toast.success("Please Wait!")}
     >

@@ -9,13 +9,13 @@ const Login = () => {
     navigate('/signup')
   }
   return (
-    <div className='flex flex-col items-center gap-5 '>
+    <div className='flex flex-col items-center gap-5 pt-10 '>
       <h2 className='font-bold text-3xl font-serif text-blue-950 '>The Ultimate Task Manager</h2>
-      <div className='flex-grow flex-col  bg-slate-600 rounded-2xl max-w-sm flex items-center justify-center w-full m-5 pb-8'>
+      <div className='flex flex-col max-w-sm w-full items-center bg-gradient-to-r from-slate-100 to-slate-300 rounded-xl py-6 mt-10 shadow-2xl border-4 border-slate-500'>
         <SignInForm />
-        <p className='text-sm text-gray-100 mt-3'>
+        <p className='text-sm text-gray-800 mt-3'>
           No Account yet? <span onClick={handleClick}
-           className="text-gray-900 hover:underline hover:font-bold ml-1">Sign Up</span>
+           className="text-gray-900 underline hover:font-bold ml-1">Sign Up</span>
         </p>
       </div>
             {/* just for the sake of testing */}

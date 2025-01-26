@@ -32,9 +32,9 @@ const Signup = () => {
   }
 
   return (
-   <div className='flex flex-col items-center'>
+   <div className='flex flex-col items-center pt-10'>
     <h2 className='font-bold text-3xl font-serif text-blue-950'>The Ultimate Task Manager</h2>
-    <div className="flex flex-col max-w-sm w-full items-center bg-slate-600 rounded-xl shadow-lg p-6 mt-10">
+    <div className="flex flex-col max-w-sm w-full items-center bg-gradient-to-r from-slate-100 to-slate-300 rounded-xl p-6 mt-10 shadow-2xl border-4 border-slate-500">
       <ToastContainer />
       <h3 className="text-2xl font-bold font-serif text-black mb-4">Sign Up</h3>
       <form className="flex flex-col items-center w-full space-y-2" onSubmit={handleSubmit}>
@@ -42,7 +42,7 @@ const Signup = () => {
         <input
           type="text"
           name="fName"
-          className="bg-slate-800 placeholder-gray-400 border border-slate-600 rounded-lg p-2 text-sm text-white focus:ring-2 focus:ring-blue-400 focus:outline-none w-full"
+          className="bg-slate-900 placeholder-gray-400 border border-slate-600 rounded-lg p-2 text-sm text-white focus:ring-2 focus:ring-blue-400 focus:outline-none w-full"
           placeholder="First Name"
           required
           onChange={(e) => setFirsName(e.target.value)}
@@ -51,7 +51,7 @@ const Signup = () => {
         <input
           type="text"
           name="lName"
-          className="bg-slate-800 placeholder-gray-400 border border-slate-600 rounded-lg p-2 text-sm text-white focus:ring-2 focus:ring-blue-400 focus:outline-none w-full"
+          className="bg-slate-900 placeholder-gray-400 border border-slate-600 rounded-lg p-2 text-sm text-white focus:ring-2 focus:ring-blue-400 focus:outline-none w-full"
           placeholder="Last Name"
           required
           onChange={(e) => setLastName(e.target.value)}
@@ -60,7 +60,7 @@ const Signup = () => {
         <input
           type="email"
           name="email"
-          className="bg-slate-800 placeholder-gray-400 border border-slate-600 rounded-lg p-2 text-sm text-white focus:ring-2 focus:ring-blue-400 focus:outline-none w-full"
+          className="bg-slate-900 placeholder-gray-400 border border-slate-600 rounded-lg p-2 text-sm text-white focus:ring-2 focus:ring-blue-400 focus:outline-none w-full"
           placeholder="example@gmail.com"
           required
           onChange={(e) => setEmail(e.target.value)}
@@ -69,23 +69,23 @@ const Signup = () => {
         <input
           type="password"
           name="password"
-          className="bg-slate-800 placeholder-gray-400 border border-slate-600 rounded-lg p-2 text-sm text-white focus:ring-2 focus:ring-blue-400 focus:outline-none w-full"
+          className="bg-slate-900 placeholder-gray-400 border border-slate-600 rounded-lg p-2 text-sm text-white focus:ring-2 focus:ring-blue-400 focus:outline-none w-full"
           placeholder="I am your Secret"
           required
           onChange={(e) => setPassword(e.target.value)}
         />
         <button
           type="submit"
-         className="bg-slate-50 hover:font-bold border border-black justify-items-center rounded-lg text-sm py-1 dark:text-black  w-32"
+         className="bg-slate-50 trantion-all duration-300 ease-in-out hover:font-bold hover:border-2 border border-black justify-items-center rounded-lg text-sm py-1 dark:text-black  w-32"
           onClick={() => toast.success("Please Wait!")}
         >
           Sign Up
         </button>
       </form>
-      <p className="text-sm text-gray-100 mt-3">
+      <p className="text-sm text-gray-800 mt-3">
         Already have an account?
         <button
-          className="text-gray-900 hover:underline hover:font-bold ml-1"
+          className="text-gray-900 underline hover:font-bold ml-1"
           onClick={handleClick}
         >
           Sign In
