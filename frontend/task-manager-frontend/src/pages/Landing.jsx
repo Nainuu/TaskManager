@@ -16,7 +16,7 @@ const Landing = () => {
           The Ultimate Task Manager
         </h1>
         <p className='mt-4 text-lg sm:text-xl lg:text-2xl max-w-2xl mx-auto text-gray-700'>
-          A simple and effective tool to manage your tasks and boost productivity.
+          A simple and effective tool to manage your tasks, Routines, Notes and boost productivity.
         </p>
         <button 
           onClick={handleClick} 
